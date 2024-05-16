@@ -1,0 +1,162 @@
+/*
+Ejercicio completo con HTML y CSS
+1. Crear un documento HTML y vincularlo con un CSS
+2. Crear una estructura HTML que cuente con un CONTENEDOR GENERAL,
+   CABECERA, MENU, BARRA LATERAL, SECCION DE CONTENIDO PRINCIPA,
+   ELEMENTOS DENTRO DEL CONTENEDOR PRINCIPAL Y UN FOOTER
+3. Todo el contenido debe estar dentro del contenedor general
+   y su ancho sera de 1200px y estar centrado
+4. Header debe ocupar el 100% del ancho y tener un texto grande
+   centrado
+5. Menu debe tener los elementos uno al lado del otro
+6. El contenido principal debe tener un ancho del 70%
+7. El contenido dentro del contenedor principal debe ser una 
+   cuadricula con 4 lineas de dos cajas
+8. La barra lateral debe tener un ancho del 30%
+9. El footer debe tener un ancho del 100% del div que lo contiene
+   y estar abajo del todo
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#general{
+    width: 1200px;
+    border: 1px solid #ccc;
+    margin: auto; /*CENTRAR EL ELEMENTO EN MEDIO DE LA PAGINA*/
+    margin-top: 20px;
+}
+
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(80, 80, 165);
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+}
+
+/*SIRVE PARA QUE LOS ELEMENTOS DE ABAJO NO SE FLOTEN. O SE MANTENGAN EN SU POSICION-ES UN HACK*/
+.clearfix{
+    float: none; /*Evitar que el elemento no se flote. Mantenerlo estable*/
+    clear: both; /*Limpiar los elementos flotados de la derecha, izquierda y arriba*/
+}
+
+#menu{
+    background-color: #eeeeee;
+}
+
+#menu ul li{
+    /*display: inline-block;*/ /*UNA FORMA PARA QUE LOS ENLACES SE COLOQUEN UNO AL COSTADO DEL OTRO*/
+    display: block;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+#menu ul li a{
+    display: block; /*Convertir a la etiqueda "a" en una etiqueta de bloque. Para que los cambios haguen efecto*/
+    padding: 15px;
+    color: #444;
+}
+
+#menu ul li:hover{
+    background-color: rgb(80, 80, 165);
+    cursor: pointer;
+}
+
+#menu ul li:hover a{
+    color: white;
+}
+
+#contenido{
+    float: left;
+    width: 69%;
+}
+
+#lateral{
+    float: left;
+    width: 30%;
+    border: 1px solid red;
+    height: 650px;
+    text-align: center;
+    overflow-y: scroll; /*ACOMODAR EL CONTENIDO QUE SE SALE AFUERA DE LA CAJA. YA SEA CON QUITANDO LO QUE SE SALE(hidden), PONIENDO UN SCROLL, ETC*/
+}
+
+#contenido > h1{
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    color: #444;
+    text-shadow: 1px 1px 2px black; /*EJE X-EJEY-DIFUMINACION-COLOR*/
+}
+
+#contenido .caja{
+    width: 40%;
+    height: 250px;
+    background-color: #ccc;
+    border: 1px solid grey;
+    float: left;
+    margin: 20px;
+    margin-left: 40px;
+    text-align: center;
+    line-height: 250px;
+    color: black;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 15px black; /*inset SIRVE PARA PONER UNA SOMBRA INTERIOR Y SE PONE AL FINAL DE TODO*/
+    border-radius: 50px 10px 4px 61px; /*BORDE REDONDEADO: PRIMERA ESQUINA-SEGUNDA ESQUINA-TERCERA ESQUINA-CUARTA ESQUINA*/ 
+}
+
+.sombra-interior{
+    box-shadow: 0px 0px 20px black inset !important; /*inset SIRVE PARA PONER UNA SOMBRA INTERIOR*/
+}
+
+#footer{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background-color: #eee;
+    text-align: center;
+    color: #444;
+    border-top: 1px solid #ccc;
+}
+
+.libre{
+    /*POSICIONAMIENTO DE CAJAS EN CUALQUIER PARTE DE LA VENTANA. CONSIDERANDO QUE EL CONTENEDOR PRINCIPAL ES UN "POSITION RELATIVE"*/
+    /*EL "POSITION ABSOLUTE" SE UBICARA EN BASE A LA "POSITION RELATIVE"*/
+    position: absolute;
+    top: 450px;
+    left: 50%;
+
+    border: 1px solid black;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+
+.libre1{
+    z-index: 2; /*SIRVE PARA UBICAR LA CAJA. YA SEA EN SIMA O DETRAS*/
+}
+
+.libre2{
+    background-color: green;
+    top: 420px;
+    z-index: 1; /*SIRVE PARA UBICAR LA CAJA. YA SEA EN SIMA O DETRAS*/
+}
+
+.fija{
+    position: fixed; /*r PONDRA FIJA LA CAJA POR MAS QUE SE HAGUE SCROLL. TIENE EL MISMO COMPORTAMIENTO QUE "POSITION ABSOLUTE"*/
+    top: 50%;
+    left: 0px;
+
+    border: 1px solid black;
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    font-size: 13px; 
+}

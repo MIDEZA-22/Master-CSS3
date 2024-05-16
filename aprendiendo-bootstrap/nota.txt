@@ -1,0 +1,5 @@
+PASOS:
+    1) Descargar Bootstrap y copiarlo a nuestro proyecto (https://getbootstrap.com/docs/5.3/getting-started/download/)
+    2) Descargar la versión de producción comprimida de Jquery (https://code.jquery.com/jquery-3.7.1.min.js)
+        2.1) Crear una carpeta llana "jquery" en nuestro proyecto
+        2.2) Guardar hay el archivo descargado

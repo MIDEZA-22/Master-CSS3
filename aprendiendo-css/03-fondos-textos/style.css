@@ -1,0 +1,32 @@
+body{
+    background-color: white; /*Color de fondo especifico*/
+    /*background-image: url(img/patron1.jpg);*/ /*R PONER UNA IMAGEN COMO FONDO*/
+    background-repeat: no-repeat; /*Para que la imagen se acomode en la pantalla: para que repita o no el fondo, para que repita en el eje x o y, etc. */
+    background-size: 100% 100%; /* El tamaño de la imagen CON RESPECTO AL EJE X y Y*/
+    background-attachment: fixed; /*az PONER LA IMAGEN FIJA CUANDO SE HAGUE EL SCROLL O DESPLAZAMIENTO DE LA PANTALLA*/
+    background-position: left bottom; /*Posicion del fondo, en este caso. INFERIOR IZQUIERDA*/
+    
+    text-indent: 15px; /*A cada parrafo le pone sangria*/
+    word-spacing: 10px; /*Espacio entre palabras*/
+    letter-spacing: 5px; /*Espacio entre letra y letra*/
+}
+
+#caja{
+    border: 5px solid black; /*Borde-ANCHURA DEL BORDE-TIPO DE BORDE-COLOR DE BORDE*/
+    padding: 10px; /* Es un margen interior*/
+    background-color: rgb(122, 51, 51); /*Color de fondo especifico*/
+    color: white; /*Color de letra*/
+    font-family: "Open Sans";
+    text-align: center; /*Alineacion del texto*/
+    line-height: 25px; /*Altura entre textos*/
+    text-transform: uppercase; /*Cambiar de minusculas a mayusculas o vicebersa*/
+    text-decoration: underline; /*El texto se subraya*/
+    vertical-align: top; /*Alineacion vertical*/
+}   
+
+h2{
+    color: rgb(193, 233, 83);
+    background-color: white;
+    background-image: url(img/patron2.jpg); /*R PONER UNA IMAGEN COMO FONDO*/
+    border: 5px solid red;
+}

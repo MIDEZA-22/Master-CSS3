@@ -1,0 +1,73 @@
+
+/*R TRANSICIONES */
+#boton{
+    display: block;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    width: 150px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border: 5px solid black;
+
+    /*R LAS TRANSICIONES QUE SE APLICAN CUANDO SE HACE "#boton:hover", SE HACEN EN LA ETIQUETA SIN PSEUDOCLASES "#boton" O EN LA ETIQUETA DONDE SE DEFINIO LAS CARACTERISTICAS PRINCIPALES */
+    transition: all 0.5s; /*all APLICA LA TRANSICION A TODAS LAS PROPIEDADES CSS QUE SE LE DIO AL "#boton:hover" */
+    /*transition: border 1s;*/
+    /*transition: border 1s, background-color 15s, border-radius 1s;*/
+}
+
+#boton:hover{
+    border-radius: 15px;
+    background-color: orangered;
+    border: 5px solid red;
+}
+
+/*R ANIMACIONES */
+
+#caja{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background: rgb(30, 7, 59);
+    color: bisque;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 250px;
+
+    animation-name: desplazamiento2; /*NOMBRE DEL KEYFRAMES CREADO*/
+    animation-duration: 10s; /*LA VELOCIDAD DE LA ANIMACION*/
+    animation-timing-function: linear; /*LA VELOCIDAD DE LA ANIMACION SERA CONSTANTE Y SIN PAUSAS*/
+    animation-iteration-count: infinite; /*SIGNIFICA SI LA ANIMACION SERA INFINITA O NO*/
+}
+
+/*R CREACION DE ANIMACIONES CORTAS*/
+@keyframes desplazamiento1{
+    from{ /*az EMPIEZA LA ANIMACION*/
+        margin-left: 0px;
+    }
+    to{ /*az DONDE TERMINA LA ANIMACION*/
+        margin-left: 1200px;
+    }
+}
+
+/*R CREACION DE ANIMACIONES LARGAS - SE LE PUEDE METER ANIMACIONES EN EL PORCENTAJE QUE SE DESEE*/
+@keyframes desplazamiento2{
+    0%{ /*az CUANDO LA ANIMACION EMPIEZA, APLICARA LO SIGUIENTE:*/
+        margin-left: 0px;
+        transform: rotate(0deg); /*az ROTACION DE LA FIGURA DE 0 GRADOS*/
+    }
+    50%{ /*az CUANDO LA ANIMACION ESTA EN EL 50%, APLICARA LO SIGUIENTE:*/
+        margin-left: 1200px;
+        transform: rotate(360deg); /*az ROTACION DE LA FIGURA DE 360 GRADOS*/
+        border-radius: 999px;
+    }
+    75%{ /*az CUANDO LA ANIMACION ESTA EN EL 75%, APLICARA LO SIGUIENTE:*/
+        background-color: red;
+    }
+    100%{ /*az CUANDO LA ANIMACION TERMINA EMPEZARA EN 0%, APLICARA LO SIGUIENTE:*/
+        margin-left: 0px;
+        transform: rotate(0deg); /*az ROTACION DE LA FIGURA DE 0 GRADOS*/
+    }
+}

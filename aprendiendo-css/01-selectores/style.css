@@ -1,0 +1,98 @@
+/*
+***********SELECTORES***********
+*/
+
+/*Selector universal*/
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Selector etiqueta*/
+h1{
+    background: red;
+    color: white;
+    padding: 10px;
+}
+
+a{
+    font-size: 25px; /*El tamaño de letra*/
+    color: aqua; /*Color de la letra*/
+    text-decoration: none; /*Decoracion del texto*/
+}
+
+
+/*Selector de id*/
+#descripcion, /*Se pueden compartir estilos*/
+#titulo{
+    border: 5px solid black; /*'Ancho de borde' 'Tipo de borde' 'Color de borde'*/
+    padding: 15px;
+}
+
+#titulo{
+    background: blue;
+    border: 2px dashed white;
+}
+
+#usuario form {
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;   
+}
+
+#usuario form *{ /*Seleccionar todos los elementos(*=selector universal) dentro del form*/
+    display: block; /*Permite que los elementos se comporten como texto(uno al lado del otro) o como elementos en bloque(uno debajo del otro)*/
+    
+}
+
+/*Selector de clase*/
+.parrafo{
+    font-style: italic; /*Poner el texto en kursiva*/
+    /*text-decoration: underline;*/ /*Decoracion del texto, una linea debajo del texto*/
+    font-weight: bold; /*Poner el texto en negrita*/
+    padding: 10px;
+}
+
+.parrafo1{
+    background-color: green;
+    color: white;
+    
+}
+
+.parrafo3{
+    background-color: orange;
+    color: black;
+}
+
+/*Selector de atributo*/
+input[type="text"]{
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 300px;
+}
+
+input[type="submit"]{
+    background: green;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-transform: uppercase; /*Cambiar de minuscula a mayuscula y vicebersa*/
+    border: 1px solid black;
+    cursor: pointer; /*Cambiar la forma del cursor*/
+}
+
+/*Selector hijo*/
+#menu>li>a{ /*Afecta directamente a los elementos que esta despues de cada selector*/
+    font-size: 25px; /*El tamaño de letra*/
+    color: red; /*Color de la letra*/
+    text-decoration: none; /*Decoracion del texto*/
+}
+
+/*Prioridad - CSS DA PRIORIDAD A LAS REGLAS QUE SON MAS ESPECIFICAS(#saludo h1). SI LA REGLAS NO SON ESPECIFICAS, CSS TOMA LA ULTIMA REGLA CODIFICADA COMO PRIORIDAD(h1) */
+#saludo h1{
+    background: brown;
+}
+
+h1{
+    background: purple !important; /* !important SIRVE PARA QUE LA REGLA SE ANTEPONGUE A CUALQUIER REGLA ESPECIFICA(#saludo h1) QUE CSS DA PRIORIDAD. LA REGLA(h1) FUERZA SU PRIORIDAD */
+}

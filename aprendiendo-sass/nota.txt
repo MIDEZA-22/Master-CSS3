@@ -1,0 +1,21 @@
+CMD: sass --watch estilos.scss styles.css
+
+El comando sass --watch estilos.scss:styles.css se utiliza para compilar 
+archivos Sass en archivos CSS y luego observar cualquier cambio en el archivo 
+Sass para recompilar automáticamente cuando se guarden los cambios. Aquí hay 
+un desglose de lo que hace cada parte del comando:
+
+sass: Este es el comando de línea de comandos para Sass, un preprocesador de 
+CSS que permite escribir estilos de una manera más eficiente y con características 
+adicionales.
+
+--watch: Esta bandera indica a Sass que observe los archivos de origen para detectar 
+cambios y vuelva a compilar automáticamente cuando se guarden los cambios.
+
+estilos.scss: Este es el archivo Sass de origen que quieres compilar.
+
+styles.css: Este es el archivo CSS de destino donde se guardarán los estilos compilados.
+
+En resumen, este comando te permite trabajar de manera más eficiente con archivos Sass, 
+ya que no tienes que compilar manualmente cada vez que hagas un cambio en tu archivo Sass; 
+Sass lo hará automáticamente por ti.

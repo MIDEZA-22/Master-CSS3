@@ -1,0 +1,53 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li{
+    font-size: 20px;
+}
+
+ul li:first-child{ /*SELECCIONA EL PRIMER HIJO "li"*/
+    color: purple;
+    font-weight: bold;
+}
+
+ul li:nth-child(2){ /*SELECCIONA CUALQUIER "li" DE LAS LISTAS*/
+    color: brown;
+    font-weight: bold;
+}
+
+ul li:last-child{ /*SELECCIONA EL ULTIMO "li"*/
+    color: gray;
+    font-weight: bold;
+}
+
+#mi-enlace{
+    font-size: 30px;
+    color: lightsalmon;
+}
+
+#mi-enlace:link{ /*CUANDO NO SE VISITA EL ENLACE EL COLOR SERA ROJO */
+    color: red;
+}
+
+#mi-enlace:visited{ /*CUANDO YA SE VISITA EL ENLACE EL COLOR SE CAMBIARA*/
+    color: orangered;
+}
+
+#mi-enlace:hover{
+    color: blue;
+}
+
+#mi-enlace:active{ /*CUANDO SE PULSA SE DARA UNOS ESTILOS DIFERENTES*/
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input[type="text"]{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+input[type="text"]:focus{ /*CUANDO SE HAGUE FOCO EN EL INPUT LOS ESTILOS CAMBIARAN*/
+    border: 4px dashed red;
+}

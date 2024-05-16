@@ -1,0 +1,221 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* --------------- EJERCICIO COMPLETO AREAS--------------- */
+
+#website-areas * {
+    margin: 0px;
+    padding: 0px;
+}
+
+#website-areas {
+    display: grid; /* Es una propiedad de CSS que se utiliza para crear un diseño de cuadrícula en una página web. Al aplicar esta propiedad a un contenedor, se convierte en un contenedor de cuadrícula que organiza los elementos hijos en filas y columnas, permitiendo un control preciso sobre su posición y tamaño en la página */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+    grid-template-areas: 
+        /* 5 veces porque el grid tiene 5 columnas */
+        "cabecera cabecera cabecera cabecera cabecera" 
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "pie-pagina pie-pagina pie-pagina pie-pagina pie-pagina";
+    grid-gap: 20px;
+    
+    width: 75%;
+    height: 1000px;
+    /* height: 100vh; */ /* La unidad vh (viewport height) representa el 1% de la altura del viewport. Por lo tanto, height: 100vh; hace que el elemento ocupe el 100% de la altura del viewport, es decir, que se extienda por toda la altura visible de la ventana del navegador */
+    margin: 0px auto;
+    border: 1px solid #ccc;
+}
+
+#website-areas #cabecera {
+    grid-area: cabecera;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: blue;
+    color: white;
+}
+
+#website-areas #menu {
+    grid-area: menu;
+
+    background: lightblue;
+    color: black;
+    line-height: 70px;
+}
+
+#website-areas #menu ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+
+    list-style: none;
+}
+
+#website-areas #contenido {
+    grid-area: contenido;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+
+    background: #eee;
+}
+
+#website-areas #contenido article {
+    background: #ccc;
+    border: 1px solid #555;
+}
+
+#website-areas #lateral {
+    grid-area: lateral;
+    background: orange;
+    color: white;
+}
+
+#website-areas #pie-pagina {
+    grid-area: pie-pagina;
+
+    background-color: black;
+    color: white;
+}
+
+/* --------------- EJERCICIO COMPLETO --------------- */
+/* NOTA: El viewport es como una ventana dentro de tu navegador que muestra el contenido de una página web. Es el área visible en la pantalla sin tener que desplazarse */
+
+#website * {
+    margin: 0px;
+    padding: 0px;
+}
+
+#website {
+    display: grid; /* Es una propiedad de CSS que se utiliza para crear un diseño de cuadrícula en una página web. Al aplicar esta propiedad a un contenedor, se convierte en un contenedor de cuadrícula que organiza los elementos hijos en filas y columnas, permitiendo un control preciso sobre su posición y tamaño en la página */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+
+    width: 75%;
+    height: 1000px;
+    /* height: 100vh; */ /* La unidad vh (viewport height) representa el 1% de la altura del viewport. Por lo tanto, height: 100vh; hace que el elemento ocupe el 100% de la altura del viewport, es decir, que se extienda por toda la altura visible de la ventana del navegador */
+    margin: 0px auto;
+    border: 1px solid #ccc;
+}
+
+#website #cabecera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 6;
+
+    background: blue;
+    color: white;
+}
+
+#website #menu {
+    grid-column: 1 / 6;
+
+    background: lightblue;
+    color: black;
+    line-height: 70px;
+}
+
+#website #menu ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+
+    list-style: none;
+}
+
+#website #contenido {
+    grid-column: 1 / 5;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    padding: 20px;
+
+    background: #eee;
+}
+
+#website #contenido article {
+    background: #ccc;
+    border: 1px solid #555;
+}
+
+#website #lateral {
+    grid-column: 5 / 6;
+
+    background: orange;
+    color: white;
+}
+
+#website #pie-pagina {
+    grid-column: 1 / 6;
+
+    background-color: black;
+    color: white;
+}
+
+/* --------------- EJEMPLOS --------------- */
+.layout {
+    width: 80%;
+    height: 600px;
+    margin: 0px auto;
+
+    display: grid; /* Se utiliza para crear un diseño de tipo cuadrícula (grid layout) en una página web. Con display: grid;, puedes dividir el contenido de la página en filas y columnas, y luego colocar elementos en estas celdas de manera precisa */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */ /* Es una propiedad de CSS utilizada en diseños de cuadrícula (grid layouts) para especificar el tamaño y la distribución de las columnas de la cuadrícula */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr) 3fr repeat(2, 1fr); /* Es una propiedad de CSS utilizada en diseños de cuadrícula (grid layouts) para especificar el tamaño y la distribución de las filas de la cuadrícula */
+    grid-gap: 10px; /* Es una propiedad de CSS utilizada en diseños de cuadrícula (grid layouts) para establecer el espacio entre las filas y columnas de la cuadrícula */
+
+    padding: 10px;
+    border: 3px solid orangered;
+}
+
+.layout .caja {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    background: gray;
+}
+
+.layout .red {
+    grid-column-start: 1; /* Es una propiedad de CSS utilizada en diseños de cuadrícula (grid layouts) para especificar en qué línea de la cuadrícula debe comenzar un elemento en el eje de las columnas */
+    grid-column-end: 4; /* Es una propiedad de CSS utilizada en diseños de cuadrícula (grid layouts) para especificar en qué línea de la cuadrícula debe terminar un elemento en el eje de las columnas */
+    background: red;
+}
+
+.layout .blue {
+    grid-column: 2 / 4;
+    background: blue;
+}
+
+.layout .green {
+    grid-row-start: 2; /* Es una propiedad de CSS utilizada en diseños de cuadrícula (grid layouts) para especificar en qué línea de la cuadrícula debe comenzar un elemento en el eje de las filas */
+    grid-row-end: 6; /* Es una propiedad de CSS utilizada en diseños de cuadrícula (grid layouts) para especificar en qué línea de la cuadrícula debe terminar un elemento en el eje de las filas */
+    background: green;
+}
+
+.layout .pink {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+    background: palevioletred;
+}
+
+.layout .orange {
+    grid-row: 3 / 5;
+    background: orange;
+}
+
+.layout .lightblue {
+    /*
+    grid-column-start: 1;
+    grid-column-end: 3;
+    */
+    grid-column: 2 / 4; /* Es una propiedad abreviada de CSS que se utiliza en diseños de cuadrícula (grid layouts) para especificar tanto grid-column-start como grid-column-end en una sola declaración. Esto permite definir fácilmente en qué columnas debe comenzar y terminar un elemento en la cuadrícula */
+    background: lightblue;
+}

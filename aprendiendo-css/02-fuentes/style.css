@@ -1,0 +1,32 @@
+/*r DESCARGAR UNA FUENTE DE https://fonts.google.com Y COLOCARLO EN NUESTRA CARPETA(fonts/"NOMBRE DE LA CARPETA DONDE ESTARA LA FUENTE DESCARGADA"/) */
+@font-face{
+    font-family: MPLUSCodeLatin; /*r PRIMERO: Poner un nombre personalizado para la fuente */
+    src: url(fonts/MPLUSCodeLatin/MPLUSCodeLatin-VariableFont_wdth\,wght.ttf); /*r SEGUNDO: Colocar la dirección donde se encuentra nuestra fuente descargada (fonts/MPLUSCodeLatin/)*/
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif; /*El tipo de fuente*/
+    font-style: italic; /*Poner la letra en kursiva*/
+
+    /*Colores del sistema*/
+    color: mediumpurple; /*Color de letra*/
+    /*Colores hexadecimales*/
+    color: #eeeeee;
+    /*Colores RGB*/
+    color: rgb(63, 63, 19); /* (RED, GREEN, BLUE)*/
+    /*Colores RGBA*/
+    color: rgba(50, 119, 68, 0.1); /* (RED, GREEN, BLUE, TRANSPARENCIA)*/
+}
+
+h3{
+    font-size: 35px; /*El tamaño de la letra*/
+    font-weight: lighter; /*Grosor de la letra*/
+    font-family: "MPLUSCodeLatin"; /*r Uso de nuestra fuente personalizada "MPLUSCodeLatin" */
+    color: olive; /*Color de letra*/
+}
+
+p{
+    font-family: sans-serif; /*El tipo de fuente*/
+    font-size: 18px; /*El tamaño de la letra*/
+    font-weight: 600; /*Grosor de la letra*/
+}
