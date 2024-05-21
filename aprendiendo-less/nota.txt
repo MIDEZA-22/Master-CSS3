@@ -1,11 +1,16 @@
+LESS (Leaner Style Sheets) es un preprocesador CSS que facilita la escritura y mantenimiento de estilos. 
+Aquí te explico brevemente cómo usar LESS:
 
+1. Instalación:
 
-El código que mencionas es un comando que utiliza lessc, que es un compilador de LESS (un preprocesador de CSS) 
-para convertir un archivo estilos.less en un archivo styles.css.
+	- Si no lo tienes, instala Node.js.
+	- Luego, instala LESS globalmente con el comando: npm install -g less.
 
-En este caso, estilos.less sería un archivo de código fuente en LESS que contiene estilos CSS con algunas 
-extensiones proporcionadas por LESS (como variables, mixins, anidamiento, entre otros), y styles.css sería 
-el archivo de salida donde se guardarían los estilos CSS generados después de compilar el archivo LESS.
+2. Sintaxis:
 
-Por lo tanto, el propósito de este código es compilar un archivo LESS en un archivo CSS estándar que pueda 
-ser utilizado en un sitio web o una aplicación web.
+	- Un archivo LESS tiene la extensión .less.
+
+3. Compilación:
+
+	- Compila tu archivo .less a CSS usando el comando: lessc input.less output.css (lessc estilos.less styles.css).
+	- LESS te permite escribir CSS más modular y mantenible, mejorando la eficiencia en el desarrollo de estilos para tus proyectos.
