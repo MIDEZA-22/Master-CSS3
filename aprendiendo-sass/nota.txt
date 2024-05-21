@@ -1,4 +1,18 @@
-CMD: sass --watch estilos.scss styles.css
+1. Instalación:
+
+	- Si no lo tienes, instala Node.js.
+	- Luego, instala Sass globalmente con el comando: npm install -g sass.
+
+2. Sintaxis:
+
+	- Sass tiene dos sintaxis: SCSS (parecida a CSS) y Sass (más concisa). Normalmente se usa SCSS.
+	- Un archivo Sass con sintaxis SCSS tiene la extensión .scss.
+
+3. Compilación:
+	
+	- Compila tu archivo .scss a CSS usando el comando: (sass --watch input.scss output.css) = sass --watch estilos.scss styles.css.
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 El comando sass --watch estilos.scss:styles.css se utiliza para compilar 
 archivos Sass en archivos CSS y luego observar cualquier cambio en el archivo 
